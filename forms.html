@@ -2,7 +2,7 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8">
-		<title>Forms</title>
+		<title>Formulario</title>
 		<style>
 			div{
 				border: 3px solid red;
@@ -13,24 +13,49 @@
 		</style>
 	</head>
 		<body>
-			<h1>Forms</h1>
-				<form action="" method="GET">
-					<input type="text" placeholder="Tu Nombre" name="nombre" id="nombre" size="20" required >
-					<input type="password" placeholder= "Tu Contraseña" name="pass" id="pass" size="20">
-
-					<select name="sexo" id="sexo">
-						<option value="M"> Mujer </option>
-						<option value="H"> Hombre </option>
-
-					<input type="submit" value="Enviar">
-
-					<input type="checkbox" name="Agree" value="Acepto">Acepto</select>
-
-				</form>
-
-				<form>
-					<input type="radio" name="opcion1" value="Web" checked>Web
+			<h1>Formulario</h1>
+				<h2>Datos Generales</h2>
+					<form action="" method="POST">
+						<label for="Nombre">Nombre</label>
+							<input type="text" placeholder="Nombre" name="Nombre" id="nombre" size="20" required/>
+							<br>
+						<label for="Apellido">Apellido</label>
+							<input type="text" placeholder="Apellido" name="Apellido" id="apellido" size="20" required/>
+							<br>
+						<label for="Contraseña">Contraseña</label>
+							<input type="password" placeholder= "Contraseña" name="pass" id="pass" size="20"required/>
+							<br>
+						<label>Sexo</label>
+								<select name="sexo" id="sexo"/>
+									<option value="M"> Mujer </option>
+									<option value="H"> Hombre </option>
+					</form>
 					<br>
-					<input type="radio" name="opcion2" value="Facebook">Facebook
-				</form>
+				<h3>¿Como te enteraste de nosotros?</h3>
+					<form action="" method="POST">
+						<fieldset>
+							<input type="radio" name="hear" id="web" value="Web" checked="checked"/>
+								<label for="web">Web</label>
+							<br>
+							<input type="radio" name="hear" id="facebook" value="Facebook"/>
+								<label for="facebook">Facebook</label>
+							<br>
+							<input type="radio" name="hear" id="publicidad" value="Publicidad"/>
+								<label for="publicidad">Publicidad</label>
+						</fieldset>
+					</form>
+				<h2>¿Nos recomendarias?</h2>
+					<form action="" method="POST">
+						<fieldset>
+							<input type="radio" name="share" id="yes" value="Si"/>
+								<label for="yes">Si</label>
+							<br>
+							<input type="radio" name="share" id="no" value="No"/>
+								<label for="no">No</label>
+						</fieldset>
+					</form>
+					<form>
+						<input type="checkbox" name="Agree" value="Acepto" required/>Acepto</select>
+						<input type="submit" value="Enviar">
+					</form>
 		</body>
